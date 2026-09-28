@@ -189,7 +189,13 @@ def open_location_on_map():
         url = f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(address)}"
         speak(f"Opening {address}")
         webbrowser.open(url)
-
+        time.sleep(2)
+        pyautogui.moveTo(130,470)
+        pyautogui.click()
+        pyautogui.write("HCL IT City, Sultanpur Road, Lucknow",interval=0.02)
+        pyautogui.hotkey('enter')
+        pyautogui.moveTo(513,318)
+        pyautogui.click()
 def music():
     speak("Do you want random offline music or something online?")
     choice = input("You: ").lower()
